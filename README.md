@@ -63,20 +63,46 @@ git clone https://github.com/yadhukrishnx/projectname.git
 cd projectname
 ```
 
+### Build the Docker Image
+
+```bash
+docker build -t raggem .
+```
+(Make sure that Docker ENgine is Started)
+
+### Run the Docker Container
+In Windows
+```bash
+docker run -v "${PWD}/data:/app/data" -p 8000:8000 raggem
+```
+In Linux/Mac
+```bash
+docker run -v "$(pwd)/data:/app/data" -p 8000:8000 --env-file .env raggem
+```
+
+### Checking List of Files
+```bash
+curl -X POST "http://localhost:8000/v1/pw_list_documents" -H "accept: */*" -H "Content-Type: application/json" 
+```
+### Checking List of Files
+```bash
+curl -X POST "http://localhost:8000/v1/pw_list_documents" -H "accept: */*" -H "Content-Type: application/json" 
+```
+
 ### Update your .env File with your Gemini API Key
 If you've already built a pipeline with Open AI, this is where things get slightly different. Configure your key in a .env file by providing it as follows:
 
-Copy
 GEMINI_API_KEY=*******
 Replace ******* with your actual Gemini API key. Save the file as .env in the demo-question-answering folder
 
-Demo
+
+# Demo
 ![Insert demo video or GIF here]
 A short demo video showcasing how the application responds to queries about the MCA syllabus.
 
 
-Contributing
-We welcome contributions from developers to improve or extend this project! Please follow these guidelines:
+# Contributing
+I welcome contributions from developers to improve or extend this project! Please follow these guidelines:
 
 Fork the repository.
 Create a new branch (git checkout -b feature-name).
