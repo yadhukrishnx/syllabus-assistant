@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 API_KEY = os.getenv("GEMINI_API_KEY")
-API_URL = "http://0.0.0.0:8000/v1/pw_ai_answer"
+API_URL = "http://localhost:8000/v1/pw_ai_answer"
 
 def get_response(prompt):
     headers = {

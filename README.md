@@ -84,9 +84,13 @@ docker run -v "$(pwd)/data:/app/data" -p 8000:8000 --env-file .env raggem
 ```bash
 curl -X POST "http://localhost:8000/v1/pw_list_documents" -H "accept: */*" -H "Content-Type: application/json" 
 ```
-### Checking List of Files
+### Using
 ```bash
-curl -X POST "http://localhost:8000/v1/pw_list_documents" -H "accept: */*" -H "Content-Type: application/json" 
+curl -X POST "http://localhost:8000/v1/pw_ai_answer" -H "accept: application/json" -H "Content-Type: application/json" -d "{\"prompt\": \"Subject in semester 1?\"}" 
+```
+### Runing With Streamlit ui
+```bash
+streamlit run ui.py
 ```
 
 ### Update your .env File with your Gemini API Key
@@ -97,9 +101,16 @@ Replace ******* with your actual Gemini API key. Save the file as .env in the de
 
 
 # Demo
-![Insert demo video or GIF here]
+![<video controls src="demo.mp4" title="Title"></video>]
+<div style="width:260px;max-width:100%;"><div style="height:0;padding-bottom:53.08%;position:relative;"><iframe width="260" height="138" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameBorder="0" src="https://imgflip.com/embed/96hfuz"></iframe></div><p><a href="https://imgflip.com/gif/96hfuz">via Imgflip</a></p></div>
 A short demo video showcasing how the application responds to queries about the MCA syllabus.
 
+### Query Tried in Orginal Syllabus PDF
+1.What to learn in software engineering module 2
+2.What is the outcome of Advanced Data Structure COurse
+3.Do my syllabus cover git topics
+4.In which subject will i learn git
+5.which are the reference book for software engineering
 
 # Contributing
 I welcome contributions from developers to improve or extend this project! Please follow these guidelines:
