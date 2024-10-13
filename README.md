@@ -101,10 +101,11 @@ Replace ******* with your actual Gemini API key. Save the file as .env in the de
 
 
 # Demo
-![<video controls src="demo.mp4" title="Title"></video>]
 
 
-<img src="demogif.gif"> <br>
+https://github.com/user-attachments/assets/fb3579d9-5e0f-42ff-83c6-700b86f7483d
+
+
 A short demo video showcasing how the application responds to queries about the MCA syllabus.
 
 ### Query Tried in Orginal Syllabus PDF
